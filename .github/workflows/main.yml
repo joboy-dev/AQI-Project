@@ -28,3 +28,11 @@ jobs:
     - name: Run the script
       run: |
         python data_scraper.py
+    
+    - name: Commit recent data updates
+      run: |
+        git config --global user.name 'Adegbehingbe Oluwakorede Joseph'
+        git config --global user.email 'oluwakoredeadegbehingbe@gmail.com'
+        git add -A
+        git commit -m "Update aqi_data.csv"
+        git push origin main
