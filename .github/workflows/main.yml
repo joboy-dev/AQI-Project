@@ -27,4 +27,4 @@ jobs:
 
     - name: Run the script
       run: |
-        pyhton data_scraper.py
+        python data_scraper.py
