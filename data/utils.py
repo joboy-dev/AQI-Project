@@ -22,12 +22,12 @@ def dict_to_csv(data: dict):
     # Track if file exists or not
     file_exists = False
     try:
-        with open('aqi_data.csv', 'r', encoding='utf-8') as f:
+        with open('data/aqi_data.csv', 'r', encoding='utf-8') as f:
             file_exists = True
     except FileNotFoundError:
         pass
     
-    with open('aqi_data.csv', mode='a', newline='', encoding='utf-8') as csv_file:
+    with open('data/aqi_data.csv', mode='a', newline='', encoding='utf-8') as csv_file:
         HEADERS = ['date', 'time', 'pm25', 'temperature', 'pressure', 'humidity', 'wind']
         
         # write header
