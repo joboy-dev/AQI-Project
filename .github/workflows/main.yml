@@ -42,7 +42,7 @@ jobs:
     - name: Configure git
       run: |
         git config --global user.name 'Adegbehingbe Oluwakorede Joseph'
-        git config --global user.email 'joboy-dev@users.noreply.github.com''
+        git config --global user.email 'joboy-dev@users.noreply.github.com'
     
     - name: Commit recent data updates
       run: |
