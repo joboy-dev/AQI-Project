@@ -29,10 +29,16 @@ jobs:
       run: |
         python data_scraper.py
     
-    - name: Commit recent data updates
+    - name: Configure git
       run: |
         git config --global user.name 'Adegbehingbe Oluwakorede Joseph'
-        git config --global user.email 'oluwakoredeadegbehingbe@gmail.com'
+        git config --global user.email 'joboy-dev@users.noreply.github.com''
+    
+    - name: Commit recent data updates
+      run: |
         git add -A
         git commit -m "Update aqi_data.csv"
+    
+    - name: Push data changes
+      run: |
         git push origin main
