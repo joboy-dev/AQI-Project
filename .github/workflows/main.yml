@@ -32,10 +32,7 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: Update AQI data
-        branch: main
-    
-        commit_user_name: joboy-dev
-        commit_user_email: oluwakoredeadegbehingbe@gmail.com # defaults to "41898282+github-actions[bot]@users.noreply.github.com"      
+        branch: main    
 
     # - name: Configure git
     #   run: |
