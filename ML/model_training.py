@@ -56,6 +56,6 @@ def train_model():
     print(f'RMSE: {metrics.mean_squared_error(y_test, y_pred)}')
     
     print('Saving model...')
-    with open('model.pickle', mode='wb') as file:
+    with open('ML/model.pickle', mode='wb') as file:
         pickle.dump(lreg, file)
     
