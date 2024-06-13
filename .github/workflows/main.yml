@@ -1,4 +1,4 @@
-name: Run Python Script Every Hour
+name: Run data_scraper.py every hour to add new data into the dataset and update the ML model accuracy
 
 on:
   schedule:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout repository content
