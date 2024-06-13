@@ -1,4 +1,4 @@
-name: Run data_scraper.py every hour to add new data into the dataset and update the ML model accuracy
+name: Run main.py every hour to add new data into the dataset and update the ML model accuracy
 
 on:
   schedule:
@@ -12,8 +12,6 @@ jobs:
     runs-on: windows-latest
 
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
       contents: write
 
     steps:
@@ -32,12 +30,7 @@ jobs:
 
     - name: Run the script
       run: |
-        python main.py
-
-    # - uses: stefanzweifel/git-auto-commit-action@v5
-    #   with:
-    #     commit_message: Update AQI data
-    #     # branch: main    
+        python main.py  
 
     - name: Configure git
       run: |
@@ -52,3 +45,8 @@ jobs:
     - name: Push data changes
       run: |
         git push origin main
+    
+    # - uses: stefanzweifel/git-auto-commit-action@v5
+    #   with:
+    #     commit_message: Update AQI data
+    #     # branch: main  

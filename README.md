@@ -1,3 +1,3 @@
-# Air Quality Index (AQI) Data Collector and ML Model Trining
-This project focuses on collecting Air Auality Index data from (here)[https://aqicn.org/city/nigeria/abuja/us-embassy/] and adding it to `data/aqi_data.csv` file to build a dataset for model training to determine the air quality in Nigeria.
-Thid project is solely focused on Abuja as it is the only place in Nigeria with a working AQI monitor.
+# Air Quality Index (AQI) Data Collector and ML Model Training
+This project focuses on collecting Air Auality Index data from [here](https://aqicn.org/city/nigeria/abuja/us-embassy/) and adding it to `data/aqi_data.csv` file to build a dataset for model training to determine the air quality in Nigeria.
+This project is solely focused on Abuja as it is the only place in Nigeria with a working AQI monitor.
