@@ -11,10 +11,10 @@ def clean_data():
     '''Function to clean csv data'''
     
     # Load csv data
-    print('Reading csv...\n')
+    print('Reading csv...')
     df = pd.read_csv('data/aqi_data.csv')
     
-    print('Cleaning data...\n')
+    print('Cleaning data...')
     
     # Remove time column as it won't be useful in the long run
     df.drop(columns=['date', 'time'], axis=1, inplace=True)
@@ -30,11 +30,11 @@ def clean_data():
 def train_model():
     '''Function to train and retrain the model'''
     
-    print('Loading cleaned data...\n')
+    print('Loading cleaned data...')
     clean_df = clean_data()
     
     print(clean_df)
-    print('Splitting data into train and test data...\n')
+    print('Splitting data into train and test data...')
     
     # Get independent variables
     X = clean_df.drop(columns=['pm25'])
@@ -43,19 +43,19 @@ def train_model():
     # Split data set into train and test data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=0)
     
-    print('Setting up model...\n')
+    print('Setting up model...')
     lreg = LinearRegression()
     
     print('Training model...')
     lreg.fit(X_train, y_train)
     y_pred = lreg.predict(X_test)
     
-    print('Getting accuracy score...\n')
+    print('Getting accuracy score...')
     
-    print(f'R2 Score: {metrics.r2_score(y_test, y_pred)}\n')
-    print(f'RMSE: {metrics.mean_squared_error(y_test, y_pred)}\n')
+    print(f'R2 Score: {metrics.r2_score(y_test, y_pred)}')
+    print(f'RMSE: {metrics.mean_squared_error(y_test, y_pred)}')
     
-    print('Saving model...\n')
+    print('Saving model...')
     with open('model.pickle', mode='wb') as file:
         pickle.dump(lreg, file)
     
