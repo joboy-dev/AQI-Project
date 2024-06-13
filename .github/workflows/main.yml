@@ -11,6 +11,11 @@ jobs:
   run-script:
     runs-on: windows-latest
 
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
     steps:
     - name: Checkout repository content
       uses: actions/checkout@v3
@@ -32,7 +37,7 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: Update AQI data
-        branch: main    
+        # branch: main    
 
     # - name: Configure git
     #   run: |
