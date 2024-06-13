@@ -71,9 +71,4 @@ if __name__ == '__main__':
     dict_to_csv(all_aqi_data)
     
     print(aqi_data)
-    
-    
-    
-    
-            
-               
+           
