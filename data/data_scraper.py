@@ -6,10 +6,13 @@ from data.utils import make_request, dict_to_csv
 def scrape_aqi_data():
     all_aqi_data = list()
     
+    print('Making request...')
     content = make_request('https://aqicn.org/city/nigeria/abuja/us-embassy/')
     
     # Initialize beautiful soup
     soup = BeautifulSoup(content,'html.parser')
+    
+    print('Scraping relevant data...')
     
     # Start getting all required values
     pm25 = soup.find('div', class_='aqivalue').text
