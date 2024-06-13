@@ -39,3 +39,4 @@ def dict_to_csv(data: dict):
         
         # write rows
         csv_writer.writerows(data)
+        
