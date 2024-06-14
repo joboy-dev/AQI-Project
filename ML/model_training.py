@@ -41,19 +41,25 @@ if __name__ == '__main__':
     y = clean_df['pm25'] 
     
     # Split data set into train and test data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=0)
+    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=0)
     
     print('Setting up model...')
     lreg = LinearRegression()
     
     print('Training model...')
-    lreg.fit(X_train, y_train)
-    y_pred = lreg.predict(X_test)
+    # lreg.fit(X_train, y_train)
+    # y_pred = lreg.predict(X_test)
+    
+    lreg.fit(X, y)
+    y_pred = lreg.predict(X)
     
     print('Getting accuracy score...')
     
-    print(f'R2 Score: {metrics.r2_score(y_test, y_pred)}')
-    print(f'RMSE: {metrics.mean_squared_error(y_test, y_pred)}')
+    # print(f'R2 Score: {metrics.r2_score(y_test, y_pred)}')
+    # print(f'RMSE: {metrics.mean_squared_error(y_test, y_pred)}')
+    
+    print(f'R2 Score: {metrics.r2_score(y, y_pred)}')
+    print(f'RMSE: {metrics.mean_squared_error(y, y_pred)}') 
     
     print('Saving model...')
     with open('ML/model.pickle', mode='wb') as file:
