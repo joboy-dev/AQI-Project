@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import datetime as dt
 
-from data.utils import make_request, dict_to_csv
+from .utils import make_request, dict_to_csv
     
 # def scrape_aqi_data():
 all_aqi_data = list()
