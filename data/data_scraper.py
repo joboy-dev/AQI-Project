@@ -3,7 +3,7 @@ import datetime as dt
 
 from data import utils
     
-if __name__ == '__main__':
+def scrape_data():
     all_aqi_data = list()
 
     print('Making request...')
@@ -35,4 +35,7 @@ if __name__ == '__main__':
     utils.dict_to_csv(all_aqi_data)
 
     print(aqi_data)
-           
+
+
+if __name__ == '__main__':
+    scrape_data()        
