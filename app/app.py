@@ -9,11 +9,11 @@ st.write('This is a machine learning application to help predict Air Quality Ind
 st.header('Fill in the form below')
 st.write('Enter the weather conditions.')
 
-temperature = st.number_input(label='Enter temperature in celsius:', min_value=0.1, max_value=100.0, value=1.0)
+temperature = st.number_input(label='Enter temperature in celsius:', min_value=10.0, max_value=100.0, value=20.0)
 
-pressure = st.number_input(label='Enter pressure:', min_value=500.0, max_value=2000.0, value=500.0)
+pressure = st.number_input(label='Enter pressure:', min_value=500.0, max_value=1500.0, value=1000.0)
 
-humidity = st.number_input(label='Enter humidity:', min_value=0.1, max_value=150.0, value=1.0)
+humidity = st.number_input(label='Enter humidity:', min_value=10.0, max_value=150.0, value=20.0)
 
 wind = st.number_input(label='Enter wind speed:', min_value=1.0, max_value=10.0, value=1.0)
 
