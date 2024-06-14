@@ -34,7 +34,8 @@ if __name__ == '__main__':
     clean_df = clean_data()
     
     print(clean_df)
-    print('Splitting data into train and test data...')
+    
+    # print('Splitting data into train and test data...')
     
     # Get independent variables
     X = clean_df.drop(columns=['pm25'])
