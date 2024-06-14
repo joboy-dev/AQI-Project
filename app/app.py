@@ -15,7 +15,7 @@ pressure = st.number_input(label='Enter pressure:', min_value=500.0, max_value=1
 
 humidity = st.number_input(label='Enter humidity:', min_value=10.0, max_value=150.0, value=20.0)
 
-wind = st.number_input(label='Enter wind speed:', min_value=1.0, max_value=10.0, value=1.0)
+wind = st.number_input(label='Enter wind speed:', min_value=1.0, max_value=20.0, value=1.0)
 
 if st.button(label='Predict AQI'):
     aqi = predict_aqi(temperature, pressure, humidity, wind)
