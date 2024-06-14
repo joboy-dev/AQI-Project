@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import datetime as dt
 
-from . import utils
+from data import utils
     
 if __name__ == '__main__':
     all_aqi_data = list()
