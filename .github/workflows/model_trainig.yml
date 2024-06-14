@@ -39,7 +39,7 @@ jobs:
     
     - name: Commit recent data updates
       run: |
-        git add -A
+        git add ML/model.pickle
         git commit -m "Update model.pickle"
     
     - name: Push data changes
