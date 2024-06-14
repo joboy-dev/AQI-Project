@@ -1,13 +1,13 @@
 from bs4 import BeautifulSoup
 import datetime as dt
 
-from data.utils import make_request, dict_to_csv
+from . import utils
     
 if __name__ == '__main__':
     all_aqi_data = list()
 
     print('Making request...')
-    content = make_request('https://aqicn.org/city/nigeria/abuja/us-embassy/')
+    content = utils.make_request('https://aqicn.org/city/nigeria/abuja/us-embassy/')
 
     # Initialize beautiful soup
     soup = BeautifulSoup(content,'html.parser')
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     }
     all_aqi_data.append(aqi_data)
 
-    dict_to_csv(all_aqi_data)
+    utils.dict_to_csv(all_aqi_data)
 
     print(aqi_data)
            
