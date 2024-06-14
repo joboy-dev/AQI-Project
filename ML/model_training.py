@@ -27,8 +27,8 @@ def clean_data():
     return df
 
 
-def train_model():
-    '''Function to train and retrain the model'''
+if __name__ == '__main__':
+    '''Train and retrain the model'''
     
     print('Loading cleaned data...')
     clean_df = clean_data()

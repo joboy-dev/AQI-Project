@@ -1,8 +1,8 @@
-name: Run main.py every hour to add new data into the dataset and update the ML model accuracy
+name: Model training
 
 on:
   schedule:
-    - cron: '0 * * * *' # This cron expression means "at the start of every hour"
+    - cron: '0 0 * * 0' 
   push:
     branches:
       - main
@@ -30,7 +30,7 @@ jobs:
 
     - name: Run the script
       run: |
-        python main.py  
+        python ML/model_training.py  
 
     - name: Configure git
       run: |
@@ -40,13 +40,8 @@ jobs:
     - name: Commit recent data updates
       run: |
         git add -A
-        git commit -m "Update aqi_data.csv"
+        git commit -m "Update model.pickle"
     
     - name: Push data changes
       run: |
-        git push origin main
-    
-    # - uses: stefanzweifel/git-auto-commit-action@v5
-    #   with:
-    #     commit_message: Update AQI data
-    #     # branch: main  
+        git push origin main 
