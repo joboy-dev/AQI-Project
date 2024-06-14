@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 import datetime as dt
 
-from data import utils
+import utils
     
-def scrape_data():
+if __name__ == '__main__':
     all_aqi_data = list()
 
     print('Making request...')
@@ -35,7 +35,4 @@ def scrape_data():
     utils.dict_to_csv(all_aqi_data)
 
     print(aqi_data)
-
-
-if __name__ == '__main__':
-    scrape_data()        
+      
