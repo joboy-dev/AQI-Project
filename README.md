@@ -3,4 +3,4 @@ This project focuses on collecting Air Auality Index data from [here](https://aq
 This project is solely focused on Abuja as it is the only place in Nigeria with a working AQI monitor.
 
 ### View app
-Test the application from [here](https://aqi-predictor.streamlit.app/). Although, the results won't be accurate until enough data has been collected for the dataset.
+Test the application from [here](https://aqi-predictor.streamlit.app/). Although, the results won't be very accurate until enough data has been collected for the dataset.
