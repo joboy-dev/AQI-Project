@@ -20,6 +20,7 @@ if __name__ == '__main__':
     pressure = soup.find('td', id='cur_p').text
     humidity = soup.find('td', id='cur_h').text
     wind = soup.find('td', id='cur_w').text
+    # temperature = soup.select_one('tr td#cur_t.tdcur').text
 
     aqi_data = {
         'date': dt.datetime.now().date().strftime('%d-%m-%Y'),

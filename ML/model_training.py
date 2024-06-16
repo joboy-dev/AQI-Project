@@ -22,7 +22,11 @@ def clean_data():
     # Remove duplocate values from csv data
     df.drop_duplicates(inplace=True)
     
-    # TODO: Drop null values if need be
+    # Drop null values if need be
+    df = df[df['temperature'] != '-' ]
+    df = df[df['pressure'] != '-' ]
+    df = df[df['humidity'] != '-' ]
+    df = df[df['wind'] != '-' ]
         
     return df
 
