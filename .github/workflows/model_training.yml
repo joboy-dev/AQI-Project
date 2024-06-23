@@ -43,6 +43,6 @@ jobs:
         git add ML/model.pickle
         git commit -m "Update model.pickle"
     
-    # - name: Push data changes
-    #   run: |
-    #     git push origin main 
+    - name: Push data changes
+      run: |
+        git push origin main 
